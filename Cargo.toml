@@ -1,0 +1,4 @@
+[package]
+name = "advent-of-rust"
+version = "0.1.0"
+authors = ["Petar Veličković <pv273@cam.ac.uk>"]
