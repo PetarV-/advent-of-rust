@@ -3,9 +3,6 @@ use std::fs::File; // we will be reading the input from a file
 use std::path::Path;
 
 fn main() {
-	//let mut f = try!(File::open("input.txt")); // try! macro wraps error handling
-
-	// Open the path in read-only mode, returns `io::Result<File>`
     let mut f = File::open(Path::new("/Users/PetarV/rust-proj/advent-of-rust/target/input.txt"))
     	.ok()
     	.expect("Failed to open the input file!");
