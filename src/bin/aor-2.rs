@@ -13,7 +13,6 @@ fn main() {
 		.ok()
 		.expect("Failed to read from the input file!");
 
-    // We're reading the input line by line now, so create a buffered reader
     let ret = input.lines().fold(0, |acc, line| {
     	let sides: Vec<u32> = line.split('x').map(|len| { 
     			len.parse().ok().expect("Could not parse into an integer!")
