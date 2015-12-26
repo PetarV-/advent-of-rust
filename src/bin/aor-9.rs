@@ -144,11 +144,11 @@ fn main() {
         graph.add_edge(b.clone(), a.clone(), d);
     }
 
-    let ret_1 = graph.get_shortest_ham_length();
+    let ret = graph.get_shortest_ham_length();
 
-    println!("The shortest Hamiltonian path length is {}.", ret_1);
+    println!("The shortest Hamiltonian path length is {}.", ret);
 
-    let ret_2 = graph.get_longest_ham_length();
+    let ret = graph.get_longest_ham_length();
 
-    println!("The longest Hamiltonian path length is {}.", ret_2);
+    println!("The longest Hamiltonian path length is {}.", ret);
 }
