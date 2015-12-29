@@ -25,10 +25,8 @@ fn main() {
     let ret = input.len();
 
     println!("The final length of the sequence after 40 steps is {}.", ret);
-    
-    input = "1321131112".to_string();
 
-    for _ in 0..50 {
+    for _ in 40..50 {
         let (acc, State::Tracking(c, l)) = input.chars()
             .fold(("".to_string(), State::Tracking('\0', 0)), |(acc, state), ch| {
                 let State::Tracking(x, len) = state;

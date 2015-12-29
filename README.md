@@ -12,6 +12,7 @@ With that in mind, here is a list of the challenges where I have particularly ap
 * **Day 6**, where I have implemented a Quadtree data structure with lazy propagation for more efficient range updates.
 * **Day 7**, where I have first implemented a Graph data structure. This might sound simple, but Rust's borrows checker has made it a very demanding task, requiring usage of dynamic borrowing structures such as RefCell.
 * **Day 9**, where I have implemented a dynamic programming approach to solving the shortest/longest Hamiltonian path problems, reducing the complexity from O(n!) to O(2^n n^2).
+* **Day 12**, where I have implemented a custom parser (taking into account just the data required for solving the problem), rather than using an external JSON library.
 
 ## License
 MIT
