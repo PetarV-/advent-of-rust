@@ -16,7 +16,7 @@ With that in mind, here is a list of the challenges where I have particularly ap
 * **Day 13**, where I have implemented a dynamic programming approach to solving the Travelling Salesman Problem (similarly to Day 9).
 * **Day 17**, where I have implemented a dynamic programming approach to solving the counting and weighted variants of the Subset Sum problem, reducing the complexity from O(2^n) to O(n * sum).
 * **Day 18**, where I have implemented a slightly optimised approach to Conway's Game of Life (examining only the neighbourhood of the recently changed cells). I am considering attempting the Hashlife algorithm at some point.
-* **Day 19**, where I have implemented a modification of the CYK algorithm for computing the parse length. In the given grammar, all parse lengths are equal, so the algorithm was adequate.
+* **Day 19**, where I have implemented a modification of the Cocke-Younger-Kasami (CYK) algorithm for computing the parse length. In the given grammar, all parse lengths are equal, so the algorithm was adequate.
 
 ## License
 MIT
