@@ -1,5 +1,5 @@
 # advent-of-rust
-My solutions to Advent of Code challenges, written in Rust.
+My solutions to [Advent of Code](http://adventofcode.com) challenges, written in [Rust](https://www.rust-lang.org).
 
 ## Methodology
 I found these challenges to be a good opportunity for getting acquainted with a new language. Therefore I decided to do all of them using Rust, which is a modern alternative to my currently favourite language, C++.
@@ -17,6 +17,17 @@ With that in mind, here is a list of the challenges where I have particularly ap
 * **Day 17**, where I have implemented a dynamic programming approach to solving the counting and weighted variants of the Subset Sum problem, reducing the complexity from O(2^n) to O(n * sum).
 * **Day 18**, where I have implemented a slightly optimised approach to Conway's Game of Life (examining only the neighbourhood of the recently changed cells). I am considering attempting the Hashlife algorithm at some point.
 * **Day 19**, where I have implemented a modification of the Cocke-Younger-Kasami (CYK) algorithm for computing the parse length. In the given grammar, all parse lengths are equal, so the algorithm was adequate.
+* **Day 25**, where I have implemented modular exponentiation by squaring to compute the required matrix element in O(log n).
+
+## Final result
+
+![](aoc_full_tree.png)
+
+## TODOs
+
+* Write my own implementation of MD5 for Day 4, to avoid an external dependency.
+* Consider implementing Hashlife for Day 18.
+* Add further checks to my algorithm for Day 24, so it can handle inputs which cannot always be split into k parts.
 
 ## License
 MIT
