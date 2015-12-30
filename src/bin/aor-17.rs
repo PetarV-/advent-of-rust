@@ -26,16 +26,7 @@ fn main() {
 
     let n = nums.len();
 
-    let mut dp = Vec::new();
-    // Vec::resize() seems to be unstable, so manually filling
-    for _ in 0..(n + 1) {
-        let mut vec = Vec::new();
-        for _ in 0..(lim + 1) {
-            vec.push(0);
-        }
-        dp.push(vec);
-    }
-
+    let mut dp = vec![vec![0; lim + 1]; n + 1];
     dp[0][0] = 1;
     for i in 1..(n + 1) {
         for s in 0..(lim + 1) {
@@ -49,11 +40,7 @@ fn main() {
 
     println!("There are {} different combinations of containers.", dp[n][lim]);
 
-    let mut dp = Vec::new();
-    for _ in 0..(lim + 1) {
-        dp.push(INFTY);
-    }
-
+    let mut dp = vec![INFTY; lim + 1];
     dp[0] = 0;
 
     for i in 0..n {

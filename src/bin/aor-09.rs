@@ -51,15 +51,7 @@ impl Graph {
     fn get_shortest_ham_length(&self) -> u32 {
         let n = self.nodes.len();
         let lim = 1 << n;
-        let mut dp = Vec::new();
-        // Vec::resize() seems to be unstable, so manually filling
-        for _ in 0..lim {
-            let mut vec = Vec::new();
-            for _ in 0..n {
-                vec.push(INFTY);
-            }
-            dp.push(vec);
-        }
+        let mut dp = vec![vec![INFTY; n]; lim];
         for i in 0..n {
             dp[1 << i][i] = 0;
         }
@@ -87,18 +79,7 @@ impl Graph {
     fn get_longest_ham_length(&self) -> u32 {
         let n = self.nodes.len();
         let lim = 1 << n;
-        let mut dp = Vec::new();
-        // Vec::resize() seems to be unstable, so manually filling
-        for _ in 0..lim {
-            let mut vec = Vec::new();
-            for _ in 0..n {
-                vec.push(0);
-            }
-            dp.push(vec);
-        }
-        for i in 0..n {
-            dp[1 << i][i] = 0;
-        }
+        let mut dp = vec![vec![0; n]; lim];
         for mask in 0..lim {
             for i in 0..n {
                 if (mask >> i) & 1 == 1 {

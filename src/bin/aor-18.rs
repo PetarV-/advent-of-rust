@@ -78,15 +78,7 @@ fn main() {
 
     let n = 100;
 
-    let mut mat = Vec::new();
-    // Vec::resize() seems to be unstable, so manually filling
-    for _ in 0..(n + 1) {
-        let mut vec = Vec::new();
-        for _ in 0..(n + 1) {
-            vec.push(0);
-        }
-        mat.push(vec);
-    }
+    let mut mat = vec![vec![0; n]; n];
 
     let mut changed = HashSet::new();
 

@@ -51,15 +51,7 @@ impl Graph {
     fn get_tsp_length(&self) -> i32 {
         let n = self.nodes.len();
         let lim = 1 << n;
-        let mut dp = Vec::new();
-        // Vec::resize() seems to be unstable, so manually filling
-        for _ in 0..lim {
-            let mut vec = Vec::new();
-            for _ in 0..n {
-                vec.push(-INFTY);
-            }
-            dp.push(vec);
-        }
+        let mut dp = vec![vec![-INFTY; n]; lim];
         dp[1][0] = 0;
         for mask in 2..lim {
             if mask % 2 == 1 {
@@ -90,15 +82,7 @@ impl Graph {
     fn get_longest_ham_length(&self) -> i32 {
         let n = self.nodes.len();
         let lim = 1 << n;
-        let mut dp = Vec::new();
-        // Vec::resize() seems to be unstable, so manually filling
-        for _ in 0..lim {
-            let mut vec = Vec::new();
-            for _ in 0..n {
-                vec.push(-INFTY);
-            }
-            dp.push(vec);
-        }
+        let mut dp = vec![vec![-INFTY; n]; lim];
         for i in 0..n {
             dp[1 << i][i] = 0;
         }
